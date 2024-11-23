@@ -23,6 +23,11 @@
         <h1 class="text-xl font-semibold leading-tight">
             Create your account
         </h1>
+        <% if(error){ %>
+            <div class="text-red-500 text-sm">
+                <%= error %>
+            </div>
+      <% } %>
         <form autocomplete="off" action="/register" method="post">
             <input name="username" type="text" placeholder="Phone, email, or username"
                 class="w-full bg-transparent border-b border-gray-500 text-white placeholder-gray-500 focus:outline-none py-2 text-lg" />
